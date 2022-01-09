@@ -6,10 +6,10 @@ import { useState, useMemo } from "react";
 import SearchContext from "../utils/searchContext";
 
 export default function IndexPage() {
-  const valueFromStorage = typeof window !== 'undefined' ? localStorage.getItem('searchTerm').value : null;
-  const [term, setTerm] = useState(valueFromStorage);
+  // const valueFromStorage = typeof window !== 'undefined' ? localStorage.getItem('searchTerm').value : null;
+  const [term, setTerm] = useState('');
   const value = useMemo(() => ({ term, setTerm }), [term]);
-  console.log(valueFromStorage);
+  // console.log(valueFromStorage);
 
   return (
     <ThemeProvider theme={theme}>
